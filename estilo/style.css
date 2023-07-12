@@ -1,0 +1,90 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Passion+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+:root {
+    --fonte1: verdana, Geneva, tahoma, sans-serif;
+    --fonte2: 'Passion One', cursive;
+    --fonte3:  'Sriracha', cursive;
+}
+* {
+ margin: 0px;
+ padding: 0px;
+ font-size: 1em;
+
+}
+html, body {
+background-color: darkgray;
+font-family: var(--fonte1);
+min-height: 100vh; /* aqui diz que o tamanho mínimo da imagem de fundo vai ser 100% da view port ou seja, toda a parte branca cheia da tela
+vh: altura
+vw: Largura */
+}
+header {
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+header >h1 {
+    padding-top: 50px;
+    font-family: var(--fonte2);
+    font-size: 10vw; /* com essa função, ao se diminuir a largura da tela, o tamanho da letra também ficará menor conforme vai se mexendo na largura da tela (5% da view port (vw)*/
+    font-variant: small-caps;
+     /* text-transform: uppercase; transforma o título no header em letra maiúscula */
+}
+header > p {
+    padding-bottom: 50px;
+}
+header a, footer a{
+    color: white;
+    text-decoration: none;
+    font-weight: bolder;
+}
+header a:hover footer a:hover {
+    text-decoration: underline;
+}
+
+section {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    line-height: 2em;
+    padding-left: 30px;
+    font-family: var(--fonte3);
+    font-size: 3.5vw;
+}
+section > p {
+padding-bottom: 2em;
+
+}
+section.normal { /* configura o estilo de todas as sessões informadas no hmtl como "normal! */
+    background-color: white;
+    color: black;
+}
+section.imagem {
+   background-color: rgb(139, 136, 136);
+   color: white;
+   box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.473);
+   background-size: cover; /* usar o cover quando a imagem de fundo ficou muito grande, então nessa função ela cobre toda a tela */
+   background-attachment: fixed; /* função usada para dar o efeito paralax, ou seja a imagem fica fixa no fundo */
+}
+section.imagem >p {
+    display: inline-block;
+    padding: 5px;
+    background-color: rgba(151, 147, 147, 0.514);
+    text-shadow: 1px 1px 0px black;
+}
+
+section#img01 {
+    background-image: url(../imagens/background001.jpg);
+    background-position: right center;
+     
+}
+section#img02 {
+    background-image: url(../imagens/background002.jpg);
+    
+}
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
